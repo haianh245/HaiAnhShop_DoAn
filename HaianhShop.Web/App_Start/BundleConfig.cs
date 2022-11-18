@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace HaianhShop.Wed
+namespace HaianhShop.Web
 {
     public class BundleConfig
     {
