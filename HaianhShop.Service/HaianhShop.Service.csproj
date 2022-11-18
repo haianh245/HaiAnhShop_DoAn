@@ -43,5 +43,19 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaianhShop.Common\HaianhShop.Common.csproj">
+      <Project>{2afd66a2-1d4d-4414-a8ae-3b1399b7367b}</Project>
+      <Name>HaianhShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HaianhShop.Data\HaianhShop.Data.csproj">
+      <Project>{7c38b083-7312-4ee6-8d05-8724e9171501}</Project>
+      <Name>HaianhShop.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HaianhShop.Model\HaianhShop.Model.csproj">
+      <Project>{184a44c7-810a-416e-b2f3-65e836577fd9}</Project>
+      <Name>HaianhShop.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

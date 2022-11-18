@@ -5,12 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8788A7C-C71D-4960-8306-DB855441D02D}</ProjectGuid>
+    <ProjectGuid>{85E351B4-A239-4217-B059-3D5344F4B228}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HaianhShop.UnitTest</RootNamespace>
     <AssemblyName>HaianhShop.UnitTest</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,8 +72,8 @@
       <Project>{e5a3f02e-8085-4b1c-b966-d6e93b3c143c}</Project>
       <Name>HaianhShop.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HaianhShop.Wed\HaianhShop.Web.csproj">
-      <Project>{2452ccf7-da2a-48ef-ae2f-795291e398df}</Project>
+    <ProjectReference Include="..\HaianhShop.Web\HaianhShop.Web.csproj">
+      <Project>{b32bba96-7071-4fed-8207-42ae8e54b037}</Project>
       <Name>HaianhShop.Web</Name>
     </ProjectReference>
   </ItemGroup>
