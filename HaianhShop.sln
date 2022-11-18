@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaianhShop.UnitTest", "HaianhShop.UnitTest\HaianhShop.UnitTest.csproj", "{F8788A7C-C71D-4960-8306-DB855441D02D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaianhShop.Wed", "HaianhShop.Wed\HaianhShop.Wed.csproj", "{2452CCF7-DA2A-48EF-AE2F-795291E398DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaianhShop.Web", "HaianhShop.Wed\HaianhShop.Web.csproj", "{2452CCF7-DA2A-48EF-AE2F-795291E398DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaianhShop.Common", "HaianhShop.Common\HaianhShop.Common.csproj", "{2AFD66A2-1D4D-4414-A8AE-3B1399B7367B}"
 EndProject
