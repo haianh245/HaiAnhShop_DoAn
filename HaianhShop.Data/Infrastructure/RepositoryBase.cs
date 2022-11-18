@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using TeduShop.Data.Infrastructure;
+using HaianhShop.Data.Infrastructure;
 
 namespace HaianhShop.Data.Infrastructure
 {
