@@ -71,9 +71,9 @@
       <Project>{e5a3f02e-8085-4b1c-b966-d6e93b3c143c}</Project>
       <Name>HaianhShop.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HaianhShop.Wed\HaianhShop.Wed.csproj">
+    <ProjectReference Include="..\HaianhShop.Wed\HaianhShop.Web.csproj">
       <Project>{2452ccf7-da2a-48ef-ae2f-795291e398df}</Project>
-      <Name>HaianhShop.Wed</Name>
+      <Name>HaianhShop.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
