@@ -1,6 +1,9 @@
-﻿using HaianhShop.Model.Models;
+﻿using AutoMapper;
+using HaianhShop.Model.Models;
 using HaianhShop.Service;
 using HaianhShop.Web.Infrastructure.Core;
+using HaianhShop.Web.Infrastructure.Extensions;
+using HaianhShop.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,16 +32,16 @@ namespace HaianhShop.Web.Api
             {
                 var listCategory = _postCategoryService.GetAll();
 
-                //var listPostCategoryVm = Mapper.Map<List<PostCategoryViewModel>>(listCategory);
+                var listPostCategoryVm = Mapper.Map<List<PostCategoryViewModel>>(listCategory);
 
-                HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, listCategory);
+                HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, listPostCategoryVm);
 
                 return response;
             });
         }
 
         [Route("add")]
-        public HttpResponseMessage Post(HttpRequestMessage request, PostCategory postCategoryVm)
+        public HttpResponseMessage Post(HttpRequestMessage request, PostCategoryViewModel postCategoryVm)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -50,7 +53,7 @@ namespace HaianhShop.Web.Api
                 else
                 {
                     PostCategory newPostCategory = new PostCategory();
-                    //newPostCategory.UpdatePostCategory(postCategoryVm);
+                    newPostCategory.UpdatePostCategory(postCategoryVm);
 
                     var category = _postCategoryService.Add(newPostCategory);
                     _postCategoryService.Save();
@@ -62,7 +65,7 @@ namespace HaianhShop.Web.Api
         }
 
         [Route("update")]
-        public HttpResponseMessage Put(HttpRequestMessage request, PostCategory postCategoryVm)
+        public HttpResponseMessage Put(HttpRequestMessage request, PostCategoryViewModel postCategoryVm)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -74,7 +77,7 @@ namespace HaianhShop.Web.Api
                 else
                 {
                     var postCategoryDb = _postCategoryService.GetById(postCategoryVm.ID);
-                    //postCategoryDb.UpdatePostCategory(postCategoryVm);
+                    postCategoryDb.UpdatePostCategory(postCategoryVm);
                     _postCategoryService.Update(postCategoryDb);
                     _postCategoryService.Save();
 
