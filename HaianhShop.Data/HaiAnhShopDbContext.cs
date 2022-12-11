@@ -1,4 +1,5 @@
 ﻿using HaianhShop.Model.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HaianhShop.Data
 {
-    public class HaiAnhShopDbContext : DbContext
+    public class HaiAnhShopDbContext : IdentityDbContext<ApplicationUser>
     {
         public HaiAnhShopDbContext() : base("HaiAnhShopConnection")
         {
@@ -33,9 +34,15 @@ namespace HaianhShop.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
         public DbSet<Error> Errors { get; set; }
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public static HaiAnhShopDbContext Create()
         {
-            base.OnModelCreating(modelBuilder);
+            return new HaiAnhShopDbContext();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder builder)
+        {
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
         }
     }
 }
