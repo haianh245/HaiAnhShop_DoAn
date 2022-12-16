@@ -1,11 +1,7 @@
 ﻿using HaianhShop.Data.Infrastructure;
 using HaianhShop.Data.Repositories;
 using HaianhShop.Model.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HaianhShop.Service
 {

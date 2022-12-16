@@ -2,7 +2,11 @@
 
 
 (function () {
-    angular.module('haianhshop', ['haianhshop.products', 'haianhshop.common']).config(config);
+    angular.module('haianhshop',
+        ['haianhshop.products',
+            'haianhshop.product_categories',
+            'haianhshop.common'])
+        .config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
