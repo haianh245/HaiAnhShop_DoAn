@@ -10,6 +10,7 @@ using HaianhShop.Service;
 using HaianhShop.Web.Infrastructure.Core;
 using HaianhShop.Web.Infrastructure.Extensions;
 using HaianhShop.Web.Models;
+using System.Web.Script.Serialization;
 
 namespace HaianhShop.Web.Api
 {
@@ -162,5 +163,33 @@ namespace HaianhShop.Web.Api
             });
         }
 
+        [Route("deletemulti")]
+        [HttpDelete]
+        [AllowAnonymous]
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedProductCategories)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var listProductCategory = new JavaScriptSerializer().Deserialize<List<int>>(checkedProductCategories);
+                    foreach (var item in listProductCategory)
+                    {
+                        _productCategoryService.Delete(item);
+                    }
+
+                    _productCategoryService.Save();
+
+                    response = request.CreateResponse(HttpStatusCode.OK, listProductCategory.Count);
+                }
+
+                return response;
+            });
+        }
     }
 }
