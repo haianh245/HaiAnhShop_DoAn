@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('haianhshop.common', ['ui.router'])
+    angular.module('haianhshop.common', ['ui.router', 'ngBootbox'])
 })();
