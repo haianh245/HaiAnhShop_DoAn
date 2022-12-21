@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeduShop.Common
+namespace HaianhShop.Common
 {
     public class CommonConstants
     {
