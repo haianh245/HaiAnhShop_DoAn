@@ -31,7 +31,7 @@
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Tên sản phẩm</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" ng-maxlength="256" required name="name" ng-model="product.Name">
+                        <input type="text" class="form-control" ng-change="GetSeoTitle()" ng-maxlength="256" required name="name" ng-model="product.Name">
                         <span ng-show="frmAddProduct.name.$invalid" class="has-error">Phải nhập tên danh mục</span>
                         <span ng-show="frmAddProduct.name.$error.maxlength" class="has-error">Tên danh mục chỉ được 256 ký tự</span>
                     </div>
@@ -65,7 +65,7 @@
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Bảo hành</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" name="warranty" ng-model="product.Warranty">
+                        <input type="number" class="form-control" name="warranty" ng-model="product.Warranty">(tháng)
                     </div>
                 </div>
                 <div class="form-group row">
@@ -93,6 +93,12 @@
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Mô tả sản phẩm</label>
                     <div class="col-sm-10">
                         <textarea class="form-control" name="content" ckeditor="ckeditorOptions" ng-model="product.Content"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tags</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="tags" ng-model="product.Tags">
                     </div>
                 </div>
                 <div class="form-group row">

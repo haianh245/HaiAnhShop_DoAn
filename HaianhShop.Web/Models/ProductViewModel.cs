@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HaianhShop.Web.Models
 {
-    [Serializable]
     public class ProductViewModel
     {
         public int ID { set; get; }
