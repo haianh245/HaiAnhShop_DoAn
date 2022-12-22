@@ -1,5 +1,6 @@
 ﻿namespace HaianhShop.Data.Migrations
 {
+    using HaianhShop.Common;
     using HaianhShop.Model.Models;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
@@ -18,7 +19,7 @@
 
         protected override void Seed(HaianhShop.Data.HaiAnhShopDbContext context)
         {
-            CreateProductCategorySample(context);
+            CreateFooter(context);
             //  This method will be called after migrating to the latest version.
 
             //var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new HaiAnhShopDbContext()));
@@ -63,6 +64,19 @@
                 context.SaveChanges();
             }
 
+        }
+        private void CreateFooter(HaiAnhShopDbContext context)
+        {
+            if (context.Footers.Count(x => x.ID == CommonConstants.DefaultFooterId) == 0)
+            {
+                string content = "Footer";
+                context.Footers.Add(new Footer()
+                {
+                    ID = CommonConstants.DefaultFooterId,
+                    Content = content
+                });
+                context.SaveChanges();
+            }
         }
     }
 }
