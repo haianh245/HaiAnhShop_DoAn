@@ -5078,7 +5078,6 @@
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Post\" />
     <Folder Include="Views\ProductCategory\" />
-    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -5416,6 +5415,7 @@
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\Layouts.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Product\Category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HaianhShop.Common\HaianhShop.Common.csproj">
