@@ -1,11 +1,8 @@
 ﻿using HaianhShop.Data.Infrastructure;
 using HaianhShop.Model.Models;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HaianhShop.Data.Repositories
 {
