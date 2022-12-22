@@ -5416,6 +5416,7 @@
     <Content Include="Views\Shared\Layouts.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\Category.cshtml" />
+    <Content Include="Views\Product\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HaianhShop.Common\HaianhShop.Common.csproj">
