@@ -35,6 +35,7 @@ namespace HaianhShop.Data
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
         public DbSet<Error> Errors { get; set; }
         public DbSet<ContactDetail> ContactDetails { set; get; }
+        public DbSet<Feedback> Feedbacks { set; get; }
         public static HaiAnhShopDbContext Create()
         {
             return new HaiAnhShopDbContext();
