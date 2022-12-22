@@ -9,6 +9,12 @@ namespace HaianhShop.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
+                 name: "Contact",
+                 url: "lien-he.html",
+                 defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional },
+                 namespaces: new string[] { "HaianhShop.Web.Controllers" }
+                );
+            routes.MapRoute(
       name: "Search",
       url: "tim-kiem.html",
       defaults: new { controller = "Product", action = "Search", id = UrlParameter.Optional },

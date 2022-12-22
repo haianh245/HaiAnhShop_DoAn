@@ -21,9 +21,10 @@
 
         protected override void Seed(HaianhShop.Data.HaiAnhShopDbContext context)
         {
-            CreatePage(context);
-            //  This method will be called after migrating to the latest version.
 
+            //  This method will be called after migrating to the latest version.
+            CreatePage(context);
+            CreateContactDetail(context);
         }
         private void CreateUser(HaiAnhShopDbContext context)
         {
@@ -129,6 +130,42 @@
 
                     };
                     context.Pages.Add(page);
+                    context.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var eve in ex.EntityValidationErrors)
+                    {
+                        Trace.WriteLine($"Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation error.");
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Trace.WriteLine($"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
+                        }
+                    }
+                }
+
+            }
+        }
+        private void CreateContactDetail(HaiAnhShopDbContext context)
+        {
+            if (context.ContactDetails.Count() == 0)
+            {
+                try
+                {
+                    var contactDetail = new HaianhShop.Model.Models.ContactDetail()
+                    {
+                        Name = "Shop giày HAIANH",
+                        Address = "Số 23 Hai Bà Trưng",
+                        Email = "haianhphung245@gmail.com",
+                        Lat = 20.818028,
+                        Lng = 105.338827,
+                        Phone = "0914944542",
+                        Website = "http://haianhshop.com.vn",
+                        Other = "",
+                        Status = true
+
+                    };
+                    context.ContactDetails.Add(contactDetail);
                     context.SaveChanges();
                 }
                 catch (DbEntityValidationException ex)
