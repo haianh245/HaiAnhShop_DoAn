@@ -48,7 +48,7 @@ namespace HaianhShop.Model.Models
         public string CustomerId { set; get; }
 
         [ForeignKey("CustomerId")]
-        //public virtual ApplicationUser User { set; get; }
+        public virtual ApplicationUser User { set; get; }
 
         public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
     }
