@@ -29,6 +29,12 @@ namespace HaianhShop.Web
          namespaces: new string[] { "HaianhShop.Web.Controllers" }
      );
             routes.MapRoute(
+               name: "Register",
+               url: "dang-ky.html",
+               defaults: new { controller = "Account", action = "Register", id = UrlParameter.Optional },
+               namespaces: new string[] { "HaianhShop.Web.Controllers" }
+           );
+            routes.MapRoute(
            name: "Page",
            url: "trang/{alias}.html",
            defaults: new { controller = "Page", action = "Index", alias = UrlParameter.Optional },
