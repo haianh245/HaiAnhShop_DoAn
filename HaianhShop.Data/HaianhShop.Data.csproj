@@ -90,9 +90,16 @@
     <Compile Include="Migrations\202212231603113_EditOrderAndAppUser.designer.cs">
       <DependentUpon>202212231603113_EditOrderAndAppUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212231634298_AddGroupUser.cs" />
+    <Compile Include="Migrations\202212231634298_AddGroupUser.designer.cs">
+      <DependentUpon>202212231634298_AddGroupUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ApplicationGroupRepository.cs" />
+    <Compile Include="Repositories\ApplicationRoleGroupRepository.cs" />
+    <Compile Include="Repositories\ApplicationRoleRepository.cs" />
+    <Compile Include="Repositories\ApplicationUserGroupRepository.cs" />
     <Compile Include="Repositories\ContactDetailRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
     <Compile Include="Repositories\FeedbackRepository.cs" />
@@ -146,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212231603113_EditOrderAndAppUser.resx">
       <DependentUpon>202212231603113_EditOrderAndAppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212231634298_AddGroupUser.resx">
+      <DependentUpon>202212231634298_AddGroupUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,7 +16,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(HaianhShop.Data.HaiAnhShopDbContext context)
@@ -28,14 +28,14 @@
         }
         private void CreateUser(HaiAnhShopDbContext context)
         {
-            //var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new TeduShopDbContext()));
+            //var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new HaiAnhShopDbContext()));
 
-            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new TeduShopDbContext()));
+            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new HaiAnhShopDbContext()));
 
             //var user = new ApplicationUser()
             //{
-            //    UserName = "tedu",
-            //    Email = "tedu.international@gmail.com",
+            //    UserName = "haianh",
+            //    Email = "haianh.international@gmail.com",
             //    EmailConfirmed = true,
             //    BirthDay = DateTime.Now,
             //    FullName = "Technology Education"
@@ -50,7 +50,7 @@
             //    roleManager.Create(new IdentityRole { Name = "User" });
             //}
 
-            //var adminUser = manager.FindByEmail("tedu.international@gmail.com");
+            //var adminUser = manager.FindByEmail("haianh.international@gmail.com");
 
             //manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
         }

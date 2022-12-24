@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('haianhshop.common', ['ui.router', 'ngBootbox', 'ngCkeditor'])
+    angular.module('haianhshop.common', ['ui.router', 'ngBootbox', 'ngCkeditor', 'checklist-model'])
 })();

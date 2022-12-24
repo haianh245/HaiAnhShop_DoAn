@@ -4,7 +4,10 @@
 (function () {
     angular.module('haianhshop',
         ['haianhshop.products',
+            'haianhshop.application_groups',
             'haianhshop.product_categories',
+            'haianhshop.application_roles',
+            'haianhshop.application_users',
             'haianhshop.common'])
         .config(config)
         .config(configAuthentication);

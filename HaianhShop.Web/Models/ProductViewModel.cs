@@ -2,7 +2,7 @@
 
 namespace HaianhShop.Web.Models
 {
-    [Serializable]
+    //[Serializable]
     public class ProductViewModel
     {
         public int ID { set; get; }

@@ -128,15 +128,15 @@ namespace HaianhShop.Web.Infrastructure.Extensions
             appGroup.Name = appGroupViewModel.Name;
         }
 
-        //public static void UpdateApplicationRole(this ApplicationRole appRole, ApplicationRoleViewModel appRoleViewModel, string action = "add")
-        //{
-        //    if (action == "update")
-        //        appRole.Id = appRoleViewModel.Id;
-        //    else
-        //        appRole.Id = Guid.NewGuid().ToString();
-        //    appRole.Name = appRoleViewModel.Name;
-        //    appRole.Description = appRoleViewModel.Description;
-        //}
+        public static void UpdateApplicationRole(this ApplicationRole appRole, ApplicationRoleViewModel appRoleViewModel, string action = "add")
+        {
+            if (action == "update")
+                appRole.Id = appRoleViewModel.Id;
+            else
+                appRole.Id = Guid.NewGuid().ToString();
+            appRole.Name = appRoleViewModel.Name;
+            appRole.Description = appRoleViewModel.Description;
+        }
         public static void UpdateUser(this ApplicationUser appUser, ApplicationUserViewModel appUserViewModel, string action = "add")
         {
 
