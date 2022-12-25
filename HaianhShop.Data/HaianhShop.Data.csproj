@@ -90,6 +90,10 @@
     <Compile Include="Migrations\202212231603113_EditOrderAndAppUser.designer.cs">
       <DependentUpon>202212231603113_EditOrderAndAppUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\2022121250015263_RevenuesStatisticSP.cs" />
+    <Compile Include="Migrations\2022121250015263_RevenuesStatisticSP.designer.cs">
+      <DependentUpon>2022121250015263_RevenuesStatisticSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202212231634298_AddGroupUser.cs" />
     <Compile Include="Migrations\202212231634298_AddGroupUser.designer.cs">
       <DependentUpon>202212231634298_AddGroupUser.cs</DependentUpon>
@@ -153,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212231603113_EditOrderAndAppUser.resx">
       <DependentUpon>202212231603113_EditOrderAndAppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\2022121250015263_RevenuesStatisticSP.resx">
+      <DependentUpon>2022121250015263_RevenuesStatisticSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212231634298_AddGroupUser.resx">
       <DependentUpon>202212231634298_AddGroupUser.cs</DependentUpon>

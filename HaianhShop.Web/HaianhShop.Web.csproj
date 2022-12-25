@@ -198,6 +198,7 @@
     <Compile Include="Api\PostCategoryController.cs" />
     <Compile Include="Api\ProductCategoryController.cs" />
     <Compile Include="Api\ProductController.cs" />
+    <Compile Include="Api\StatisticController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -288,6 +289,9 @@
     <Content Include="app\components\product_categories\productCategoryEditView.html" />
     <Content Include="app\components\product_categories\productCategoryListController.js" />
     <Content Include="app\components\product_categories\productCategoryListView.html" />
+    <Content Include="app\components\statistic\revenueStatisticController.js" />
+    <Content Include="app\components\statistic\revenueStatisticView.html" />
+    <Content Include="app\components\statistic\statistic.module.js" />
     <Content Include="app\shared\directives\asDateDirective.js" />
     <Content Include="app\shared\directives\fileUpload.directive.js" />
     <Content Include="app\shared\directives\pagerDirective.html" />
@@ -5117,6 +5121,7 @@
     <Folder Include="Views\ApplicationUser\" />
     <Folder Include="Views\Post\" />
     <Folder Include="Views\ProductCategory\" />
+    <Folder Include="Views\Statistic\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

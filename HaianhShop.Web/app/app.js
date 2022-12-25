@@ -8,6 +8,7 @@
             'haianhshop.product_categories',
             'haianhshop.application_roles',
             'haianhshop.application_users',
+            'haianhshop.statistics',
             'haianhshop.common'])
         .config(config)
         .config(configAuthentication);
