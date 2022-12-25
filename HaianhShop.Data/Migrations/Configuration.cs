@@ -25,6 +25,37 @@
             //  This method will be called after migrating to the latest version.
             CreatePage(context);
             CreateContactDetail(context);
+            CreateConfigTitle(context);
+        }
+        private void CreateConfigTitle(HaiAnhShopDbContext context)
+        {
+            if (!context.SystemConfigs.Any(x => x.Code == "HomeTitle"))
+            {
+                context.SystemConfigs.Add(new SystemConfig()
+                {
+                    Code = "HomeTitle",
+                    ValueString = "Trang chủ HaianhShop",
+
+                });
+            }
+            if (!context.SystemConfigs.Any(x => x.Code == "HomeMetaKeyword"))
+            {
+                context.SystemConfigs.Add(new SystemConfig()
+                {
+                    Code = "HomeMetaKeyword",
+                    ValueString = "Trang chủ HaianhShop",
+
+                });
+            }
+            if (!context.SystemConfigs.Any(x => x.Code == "HomeMetaDescription"))
+            {
+                context.SystemConfigs.Add(new SystemConfig()
+                {
+                    Code = "HomeMetaDescription",
+                    ValueString = "Trang chủ HaianhShop",
+
+                });
+            }
         }
         private void CreateUser(HaiAnhShopDbContext context)
         {
