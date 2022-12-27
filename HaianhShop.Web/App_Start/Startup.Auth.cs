@@ -123,8 +123,8 @@ namespace HaianhShop.Web.App_Start
                 }
                 else
                 {
-                    context.SetError("invalid_grant", "Tài khoản hoặc mật khẩu không đúng.'");
                     context.Rejected();
+                    context.SetError("invalid_grant", "Tài khoản hoặc mật khẩu không đúng");
                 }
             }
         }

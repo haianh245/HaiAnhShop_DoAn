@@ -35,7 +35,7 @@
             var productId = parseInt($(this).data('id'));
             cart.deleteItem(productId);
         });
-        $('.txtQuantity').off('keyup').on('keyup', function () {
+        $('.txtQuantity').off('change').on('change', function () {
             var quantity = parseInt($(this).val());
             var productid = parseInt($(this).data('id'));
             var price = parseFloat($(this).data('price'));
@@ -232,10 +232,10 @@
                             ProductId: item.ProductId,
                             ProductName: item.Product.Name,
                             Image: item.Product.Image,
-                            Price: item.Product.Price,
-                            PriceF: numeral(item.Product.Price).format('0,0'),
+                            Price: item.Product.PromotionPrice > 0 ? item.Product.PromotionPrice : item.Product.Price,
+                            PriceF: item.Product.PromotionPrice > 0 ? numeral(item.Product.PromotionPrice).format('0,0') : numeral(item.Product.Price).format('0,0'),
                             Quantity: item.Quantity,
-                            Amount: numeral(item.Quantity * item.Product.Price).format('0,0')
+                            Amount: item.Product.PromotionPrice > 0 ? numeral(item.Quantity * item.Product.PromotionPrice).format('0,0') : numeral(item.Quantity * item.Product.Price).format('0,0')
                         });
                     });
 
@@ -249,6 +249,6 @@
                 }
             }
         })
-    }
+    },
 }
 cart.init();
