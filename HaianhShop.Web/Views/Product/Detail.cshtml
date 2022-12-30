@@ -15,7 +15,7 @@
       $("#flexiselDemo1").flexisel({
         visibleItems: 5,
         animationSpeed: 1000,
-        autoPlay: true,
+        autoPlay: false,
         autoPlaySpeed: 3000,
         pauseOnHover: true,
         enableResponsiveBreakpoints: true,
@@ -119,9 +119,16 @@
         {
             <li>
                 <img src="@product.Image" />
-                <div class="grid-flex">
-                    <div><a style="height: 200px" href="/@(product.Alias).p-@(product.ID).html">@product.Name</a></div>  
-                    <p>@product.Price.ToString("N0")</p>
+                <div class="grid-product">
+                    <div><a style="line-height: normal" href="/@(product.Alias).p-@(product.ID).html">@product.Name</a></div>
+                    @if (product.PromotionPrice.HasValue)
+                    {
+                        <p style="padding-top: 10px" class="actual">@product.PromotionPrice.Value.ToString("N0")</p>
+                    }
+                    else
+                    {
+                        <p style="padding-top: 10px" class="actual">@product.Price.ToString("N0")</p>
+                    }
                 </div>
             </li>
         }
