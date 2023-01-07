@@ -227,8 +227,11 @@
                     var template = $('#tplCart').html();
                     var html = '';
                     var data = res.data;
+                    var order = 0;
                     $.each(data, function (i, item) {
+                        order++;
                         html += Mustache.render(template, {
+                            Order: order,
                             ProductId: item.ProductId,
                             ProductName: item.Product.Name,
                             Image: item.Product.Image,

@@ -6,10 +6,8 @@ using HaianhShop.Web.App_Start;
 using HaianhShop.Web.Infrastructure.Extensions;
 using HaianhShop.Web.Models;
 using Microsoft.AspNet.Identity;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 

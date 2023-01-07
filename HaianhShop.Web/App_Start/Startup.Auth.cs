@@ -14,6 +14,7 @@ using HaianhShop.Web.Infrastructure.Core;
 using HaianhShop.Service;
 using System.Linq;
 using HaianhShop.Common;
+using Microsoft.Owin.Security.Google;
 
 [assembly: OwinStartup(typeof(HaianhShop.Web.App_Start.Startup))]
 
@@ -66,15 +67,15 @@ namespace HaianhShop.Web.App_Start
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "1724156397871880",
-            //   appSecret: "398039cc7588d52f87a7adcefecc3210");
+            app.UseFacebookAuthentication(
+               appId: "563905725582584",
+               appSecret: "554c1ef01b5d620eccd96fd43ed8b62c");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "712161982861-4d9bdgfvf6pti1vviifjogopqdqlft56.apps.googleusercontent.com",
-            //    ClientSecret = "T0cgiSG6Gi7BKMr-fCCkdErO"
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "712161982861-4d9bdgfvf6pti1vviifjogopqdqlft56.apps.googleusercontent.com",
+                ClientSecret = "T0cgiSG6Gi7BKMr-fCCkdErO"
+            });
         }
         public class AuthorizationServerProvider : OAuthAuthorizationServerProvider
         {
